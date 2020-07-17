@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head Section | Initializing document, SEO optimization, title and links -->  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Trip Advisor and Tour Guide of Australia">
+    <meta name="keywords" content="hotel booking, event planning, trip management, australia tourism">
+    <meta name="author" content="Ben Flanders">
+    <title>Aussie Adventures</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/toDo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  </head>
+  
+  <body>
+<!-- Nav Bar -->
+    <nav class="navbar">
+<!-- Side NavBar -->
+      <span class="open-slide">
+        <a href="#" onclick="openSlideMenu()">
+          <i class="fas fa-bars"></i>
+          <span class="hide">test</span>
+        </a>
+      </span>
+      <div id="side-menu" class="side-nav">
+        <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="#">Locations</a>
+        <a href="toDo.html">Things To Do</a>
+        <a href="itPage.html">IT Opportunities</a>
+        <a href="contact.html">Contact</a>
+      </div>
+<!-- Main NavBar -->
+      <ul class="main-nav">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <button class="dropbtn">Locations <i class="fa fa-caret-down"></i></button>
+          <div class="dropdown-content">
+            <a href="#">Sydney</a>
+            <a href="#">Melbourne</a>
+            <a href="#">Brisbane</a>
+            <a href="#">Perth</a>
+          </div>
+        </li>
+        <li><a href="toDo.html">Things To Do</a></li>
+        <li><a href="itPage.html">IT Opportunities</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+<!-- Contact Links | NavBar -->
+      <ul class="contact-nav">
+        <li><a href="#"><i class="fab fa-facebook-f"></i><span class="hide">test</span></a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i><span class="hide">test</span></a></li>
+        <li><a href="#"><i class="fab fa-instagram"></i><span class="hide">test</span></a></li>
+        <li class="phone">1.844.555.5555</li>
+        <li><a href="#" class="reserve-button" onclick="openReserveMenu()">Make a Reservation</a></li>
+        <li><a href="#" class="reserve-button mobile" onclick="openReserveMenu()"><i class="fas fa-bed"></i><span class="hide">test</span></a></li>
+      </ul>
+      
+    </nav>
+    
+<!-- Reserve Menu Form -->
+    <div id="reserve-menu" class="reserve-panel">
+      <a href="#" class="btn-close" onclick="closeReserveMenu()">&times;</a>       
+       <form Id="reservations">
+        <h2>Make A <br>Reservation</h2>
+        <p>Use the form below to make a reservation with Aussie Adventures in one of our four resort locations!</p>
+         <label for="location" class="heading">Resort Location:</label><br>
+         <select id="location" name="OptionsSelection">
+           <option value="option1">-- --</option>
+           <option value="option2">Sydney, AUS</option>
+           <option value="option3">Melbourne, AUS</option>
+           <option value="option4">Brisbane, AUS</option>
+           <option value="option5">Perth. AUS</option>
+         </select><br>
+         <label for="check-in" class="heading">Check In:</label><br>
+         <input class="date-time" type="text" id="check-in"><br>
+         <label for="check-out" class="heading">Check Out:</label><br>
+         <input class="date-time" type="text" id="check-out"><br>
+         <label for="adults" class="heading">Adults:</label>
+         <label for="children" class="heading">Children:</label><br>
+         <input class="people" id="adults" type="number" min="1" max="6">
+         <input class="people" id="children" type="number" min="1" max="6"><br>
+         <button class="submit">Check Availability</button>
+       </form>
+     </div>  
+
+    
+    <main>
+<!-- Heading Content -->    
+    <section id="heading">
+      <h1>Things To Do In Australia</h1>
+      <p>Whether you’re looking for an adventure atop rugged mountain peaks or a relaxing getaway on the soft sand of the country's best beaches, there’s nothing like a holiday in Australia. With diverse landscapes, riveting events and unique wildlife, Australia is a place of endless opportunity. Here, you can snorkel beside whale sharks, taste incredible wine and learn from the profound wisdom of the world's oldest living culture. From island camping to rooftop cocktails, you'll find countless unforgettable activities in Australia. Down below are just a few of the experiences we suggest you try out during your stay here in Australia!</p>
+    </section> 
+    
+<!-- TO DO SECTION -->    
+    <section class="to-do">
+      <!-- camping -->
+      <div class="wrap">
+        <div class="panel camping">
+          <div class="panel-heading">
+            <i class="fas fa-campground"></i>
+            <img class="image" src="https://imgur.com/fqXLvfy.jpg" alt="camping pic"/>
+          </div>
+          <div class="panel-body">
+            <h2>CAMPING</h2>
+            <p>Even if you don’t know how to pitch a tent, there’s a camping experience that’s perfect for you somewhere in Australia. Choose from glamping in the middle of Sydney Harbour or, if you’re a seasoned camper, set out on a three-day hike in the rugged Victorian countryside. Keep your eyes peeled for the resident wildlife that might hop or amble right past your tent. </p>
+          </div>
+        </div>
+        <!-- wildlife -->
+        <div class="panel wildlife">
+          <div class="panel-heading">
+            <i class="fas fa-hippo"></i>
+            <img class="image" src="https://imgur.com/nLjDT4j.jpg" alt="wildlife pic"/>
+          </div>
+          <div class="panel-body">
+            <h2>WILDLIFE EXPERIENCES</h2>
+            <p>Australia's wildlife is incredibly unique, with many species found nowhere else in the world. While zoos and wildlife parks offer great opportunities to see animals up close, there are also plenty of other places to see Australian animals in their natural habitats.</p>   
+          </div>
+        </div>
+        <!-- parks -->
+        <div class="panel parks">
+          <div class="panel-heading">
+            <i class="fas fa-hiking"></i>
+            <img class="image" src="https://imgur.com/H98oXwr.jpg" alt="parks pic"/>
+          </div>
+          <div class="panel-body">
+            <h2>NATIONAL PARKS</h2>
+            <p>Renowned for its wild beauty, Australia’s natural landscapes are nothing less than dramatic. Even just minutes from a major city you can discover rainforests and red deserts, see anicent Aboriginal rock art sites, climb snow-capped mountains and swim in clear waters fringed by white-sand beaches. </p>     
+          </div>
+        </div>
+        <!-- beaches -->
+        <div class="panel beaches">
+          <div class="panel-heading">
+            <i class="fas fa-water"></i>
+            <img class="image" src="https://imgur.com/SvzUKqC.jpg" alt="beach pic"/>
+          </div>
+          <div class="panel-body">
+            <h2>BEACHES AND ISLANDS</h2>
+            <p>From city beaches to secluded spots where you’ll share the sand with more wildlife than humans, there are gorgeous beaches and islands across the country. Sail through the Whitsundays, marvel at a sea of red crabs on Christmas Island or embark on a coastal drive in search of the perfect spot for a surf.</p>     
+          </div>
+        </div>
+      </div>
+    </section>
+      
+    <section class="to-do">
+      <!-- food -->
+      <div class="wrap">
+        <div class="panel food">
+          <div class="panel-heading">
+            <i class="fas fa-hamburger"></i>
+            <img class="image" src="https://imgur.com/NHShY9Y.jpg" alt="food pic"/>
+          </div>
+          <div class="panel-body">
+            <h2>FOOD AND DRINK</h2>
+            <p>Australia’s flourishing culinary scene is both steeped in tradition and infused with creative twists. Beyond food, you’ll find an incredible drinks offering that includes big, bold red wine, hand-crafted gin and whisky, and one-of-a-kind craft beer.</p>
+          </div>
+        </div>
+        <!-- wine -->
+        <div class="panel wine">
+          <div class="panel-heading">
+            <i class="fas fa-wine-glass-alt"></i>
+            <img class="image" src="https://imgur.com/qHU0cEq.jpg" alt="wine pic"/>
+          </div>
+          <div class="panel-body">
+            <h2>BEST WINE REGIONS</h2>
+            <p>Australian wine ranks among the world’s best. Whether you like to sit and sip among the vines or dive deep into the winemaking world, there’s a cellar door in Australia to suit. Unwind with a glass of red in the Barossa Valley or wander through the vines in the Adelaide Hills.</p>   
+          </div>
+        </div>
+        <!-- art -->
+        <div class="panel art">
+          <div class="panel-heading">
+            <i class="fas fa-palette"></i>
+            <img class="image" src="https://imgur.com/1yPG3dP.jpg" alt="art pic"/>
+          </div>
+          <div class="panel-body">
+            <h2>ARTS AND CULTURE</h2>
+            <p>Australia boasts amazing museums and renowned galleries, but that’s just the start of the arts and culture you can experience while here. Wander down vibrantly-painted laneways and seek out hidden bars before attending epic festivals and embracing Australia’s quirky cultural attractions.</p>     
+          </div>
+        </div>
+        <!-- adrenaline rush -->
+        <div class="panel rush">
+          <div class="panel-heading">
+            <i class="fas fa-parachute-box"></i>
+            <img class="image" src="https://imgur.com/YTF2KQM.jpg" alt="roller coaster pic"/>
+          </div>
+          <div class="panel-body">
+            <h2>ADRENALINE RUSHES</h2>
+            <p>Australia has more ways to get your heart racing and your pulse pumping than just about anywhere else. Whether you like your thrills sky high or wet and wild, by mixing with wild animals on their home turf or getting close to nature from a different perspective, Australia offers awesome adrenaline-inducing activities to suit every kind of thrillseeker.</p>     
+          </div>
+        </div>
+      </div>
+    </section>
+    
+<!-- Body Text -->    
+    <section id="body">
+      <h1>Events Near Our Resorts</h1>
+      <p>If you have decided to join us at one of our renowned 5 star resorts, the fun doesn't stop there! There are several local attractions and events nearby that toursits and residents love alike! Don't forget to ask about "Event Bundling" when you reserve your resort suite! We host some of the best pre-planned tours of Australia! You have got to go see this stuff!  </p>
+    </section> 
+    
+<!-- TO DO CONT -->    
+    <section class="to-do">
+      <!-- Sydney -->
+      <div class="wrap">
+        <div class="panel sydney">
+          <div class="panel-heading">
+            <i class="fas fa-music"></i>
+            <img class="image" src="https://imgur.com/lW90Q6I.jpg" alt="opera pic"/>
+          </div>
+          <div class="panel-body">
+            <h2>SYDNEY - OPERA HOUSE</h2>
+            <p>There are many ways you can experience what the Sydney Opera House has to offer. A masterpiece of 20th-century architecture, the Sydney Opera House in Circular Quay hosts more than 40 performances each week. Book tickets to Opera Australia’s latest show and tick this truly iconic Sydney experience off your bucket list.</p>
+          </div>
+        </div>
+        <!-- Melbourne -->
+        <div class="panel melbourne">
+          <div class="panel-heading">
+            <i class="far fa-dot-circle"></i>
+            <img class="image" src="https://imgur.com/KAMwuxQ.jpg" alt="horse race pic"/>
+          </div>
+          <div class="panel-body">
+            <h2>MELBOURNE - CRICKET GROUND</h2>
+            <p>Melbourne is Australia’s sports capital and its venues are legendary. Join the fun at the Melbourne Cricket Ground (MCG) for the Australian Football League from March until September, or the international cricket matches from November until February.</p>   
+          </div>
+        </div>
+        <!-- Brisbane -->
+        <div class="panel brisbane">
+          <div class="panel-heading">
+            <i class="fas fa-torii-gate"></i>
+            <img class="image" src="https://imgur.com/6znC0ND.jpeg" alt="bridge pic"/>
+          </div>
+          <div class="panel-body">
+            <h2>BRISBANE - STORY BRIDGE</h2>
+            <p>Climb Brisbane’s Story Bridge for views across the city. In a two-hour journey you will ascend 262 feet above sea level as you learn about the bridge's history and construction. Keep the adrenaline going with an optional 30-metre (98-foot) abseil back down the anchor pier, facing the glistening river and cityscape.</p>     
+          </div>
+        </div>
+        <!-- Perth -->
+        <div class="panel culture">
+          <div class="panel-heading">
+            <i class="fab fa-artstation"></i>
+            <img class="image" src="https://imgur.com/q9kpVSr.jpg" alt="museum pic"/>
+          </div>
+          <div class="panel-body">
+            <h2>PERTH - CULTURE CENTER</h2>
+            <p>The Perth Cultural Centre delivers a fantastic one-stop culture fix. Delve into an extensive collection of Aboriginal art at the free-entry Art Gallery of Western Australia before roaming the Urban Orchard, a city garden of leafy greens and herbs. Nearby, The Perth Institute of Contemporary Arts (PICA) delivers free, modern exhibitions. </p>     
+          </div>
+        </div>
+      </div>
+    </section>
+    </main>
+    
+<!-- footer -->       
+    <footer id="footer">
+      <div id="footer-content">
+        <div class="footer-section connected">
+          <h6><span>Aussie</span> Adventures</h6>
+          <p>STAY CONNECTED! Follow us on social media, and check back here for frequent updates!</p>
+          <div class="contact-links">
+            <span><i class="fas fa-phone"></i> &nbsp; 1.844.555.5555</span>
+            <span><i class="fas fa-envelope"></i> &nbsp; info@aussieadventures.com</span>
+          </div>
+          <div class="socials">
+            <a href="#"><i class="fab fa-facebook-f"></i><span class="hide">test</span></a>
+            <a href="#"><i class="fab fa-twitter"></i><span class="hide">test</span></a>
+            <a href="#"><i class="fab fa-instagram"></i><span class="hide">test</span></a>
+          </div>
+        </div>
+        <div class="footer-section links">
+          <h6>Quick Links</h6>
+          <br>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Sydney</a></li>
+            <li><a href="#">Melbourne</a></li>
+            <li><a href="#">Brisbane</a></li>
+            <li><a href="#">Perth</a></li>
+            <li><a href="toDo.html">Things To Do</a></li>
+            <li><a href="itPage.html">IT Opportunities</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section trip">
+          <h6>Book Your Trip</h6>
+          <p>Our team can't wait to help make your dream trip to Australia come true! With new resort spots opening every day, there is never a bad time to call.</p>
+          <a href="#" class="footer-button" onclick="openReserveMenu()">Make a Reservation</a>
+        </div>
+        <div class="footer-section logo">
+          <p>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+              <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" />
+            </a>
+          </p>
+          <!-- <a href="index.html"><img class="company-logo" src="https://bit.ly/2NtmCZk" alt="company logo"/></a><br> -->
+          <p>Sign up for our monthly email list</p>
+          <label for="emailaddress" class="hide">test</label>
+          <input class="email" type="email" id="emailaddress" placeholder="Email Address">
+          <input class="email-enter" type="submit">
+        </div>
+      </div>
+      <div id="footer-bottom">
+        &copy; 2020 AussieAdventures.com | Designed by Ben Flanders
+      </div>
+    </footer>
+
+<!-- Javascript Link -->              
+    <script src="js/index.js"></script>
+                  
+  </body>
+</html>
