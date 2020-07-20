@@ -193,7 +193,7 @@ float:right
 
 /* Reservation Button and Menu Styling */
 .reserve-button{ 
-  background: #718A91;
+  background: #1a1411;
   padding:18px;
   margin-right:-60px;
   color:white;
@@ -732,7 +732,7 @@ slide:nth-child(3){
 slide:nth-child(4){ 
   left: 100%;
   animation-delay:8s;
-  background-image: url(http://alwaysgametime.com/imgs/perth.jpg);
+  background-image: url("http://alwaysgametime.com/imgs/perth.jpg");
   background-size:cover;
   background-position:center top -500px;
   opacity:0.8;
